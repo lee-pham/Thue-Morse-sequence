@@ -10,6 +10,8 @@ That's because if the first captain gets to pick
 
 while the second gets 
 
-```[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]```, the aggregate rank of the first group is 10 while the rank of the second is 11. Player 1 consistently gets to pick the better of two players every round.
+```[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]```
+
+The aggregate rank of the first group is 10 while the rank of the second is 11. Player 1 consistently gets to pick the better of two players every round.
 
 Using the Thue-Morse sequence, a 'fairer' outcome is possible by alternating player 1 and 2's turn order. This changes the skillgap of the teams from 1 to 0.2.
