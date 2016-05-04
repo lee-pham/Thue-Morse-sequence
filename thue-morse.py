@@ -31,4 +31,4 @@ def sequence(n, pool):
     print("Difference using ordered sequence is %s" % (np.mean(team[0::2])-np.mean(team[1::2])))
 
 
-sequence(10, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20])
+sequence(10, list(range(1, 21)))
