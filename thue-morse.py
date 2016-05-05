@@ -1,15 +1,17 @@
 import numpy as np
-x = np.random.randint(0, 101, size=10)
-s = np.sort(x)[::-1]
-print(s),
-print(np.mean(s))
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 
-def sequence(n, pool):
-    team = pool
-    A = []
-    B = []
-    for i in range(0, n):
+def sequence(small, large, size):
+    pool = np.sort(np.random.randint(small, large, size))[::-1]
+    A = 0
+    B = 0
+    Aturn = []
+    Bturn = []
+    Ateam = []
+    Bteam = []
+    for i in range(0, size):
         x = bin(i)[2:]
         c = 0
         for letter in x:
@@ -17,18 +19,27 @@ def sequence(n, pool):
                 c += 1
 
         if c % 2 == 0:
-            A.append(team[i])
+            A += pool[i]
+            Ateam.append(A)
+            Aturn.append(i)
         else:
-            B.append(team[i])
+            B += pool[i]
+            Bturn.append(i)
+            Bteam.append(B)
 
-    print(A),
-    print(np.mean(A)),
-    print(np.mean(team[0::2]))
-    print(B),
-    print(np.mean(B)),
-    print(np.mean(team[1::2]))
-    print("Difference using Thue-Morse is %s" % (np.mean(A)-np.mean(B)))
-    print("Difference using ordered sequence is %s" % (np.mean(team[0::2])-np.mean(team[1::2])))
+    plt.figure(1)
+    plt.plot(Aturn, Ateam)
+    plt.plot(Bturn, Bteam)
+    plt.xlabel('Turn')
+    plt.ylabel('Team Value')
+    plt.title('Thue-Morse Selection Sequence')
+    plt.figure(2)
+    plt.plot(list(range(0, size))[::2], Ateam)
+    plt.plot(list(range(0, size))[1::2], Bteam)
+    plt.xlabel('Turn')
+    plt.ylabel('Team Value')
+    plt.title('Traditional Selection Sequence')
+    plt.show()
 
 
-sequence(10, list(range(1, 21)))
+sequence(0, 100, 22)
