@@ -1,5 +1,8 @@
 # Thue-Morse Sequence
 
+![alt text](https://raw.githubusercontent.com/lee-pham/Thue-Morse-sequence/master/Traditional.png "Traditional Sequence")
+![alt text](https://github.com/lee-pham/Thue-Morse-sequence/blob/master/Thue-Morse.png "Thue-Morse Sequence")
+
 Flashback to recess time during elementary school. It's time for the two team captains to select 10 players from a pool of 20 to begin a friendly football game. Rock-paper-scissors for who picks first and you hope your best friend picks you in at least the first half of selection.
 
 You get selected second. No biggie right? Your friend/captain got the second best person while the opponent is relegated to the third best. Come game time you can't help but feel a strange feeling in the back of your mind. Overall, the opponent team is better.
